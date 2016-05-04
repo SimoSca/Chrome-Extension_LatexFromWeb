@@ -1,0 +1,42 @@
+body
+	
+	// box style	
+	formulaAdvise(bkg, brdr)
+		padding: 3px;
+		border: 1px solid brdr
+		background-color bkg 
+		color:white;
+		font-size: 11px;
+	
+	// formula image style
+	responseAdvise(brdr)
+		&:hover
+			cursor pointer
+		&:active
+			border 1px solid brdr
+
+
+	//////// wikipedia
+		
+	wikibg = #a7d7f9
+	wikibdr = #3C90D3
+	
+	[class="wikipedia-latex-copy-btn"],[class="wikipedia-latex-copy-response"]
+		formulaAdvise(wikibg, wikibdr)
+			
+	[class*="mwe-math"]
+		responseAdvise(wikibdr)
+		
+
+	//////// wolfram
+		
+	wolframbg = #009999
+	wolframbdr = #146A68
+	
+	[class="wolfram-latex-copy-btn"],[class="wolfram-latex-copy-response"]
+		formulaAdvise(wolframbg, wolframbdr)
+	
+	.numberedequation, .inlineformula
+		responseAdvise(wolframbdr)
+
+			
