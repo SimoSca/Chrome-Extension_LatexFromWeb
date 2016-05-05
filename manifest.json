@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  // "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "name": "Latex From Web",
   "description": "This extension add a button on Latex redered formulae in Web page to copy on fly the latex code. This hack works for Wikipedia.",
   "version": "1.0",
   "icons" : {
-    "19" : "images/19-aico.png",
+    "16" : "images/16-aico.png",
     "48" : "images/48-aico.png",
     "128" : "images/128-aico.png"
   },
@@ -13,20 +13,24 @@
     "style/*"
   ],
   "permissions": [
-    "<all_urls>" // mi serve per fare in modo che l'app (la background page) accedere a tutti gli url: cosi' posso interagire con tutte le pagine web
+    "tabs", // to use tabs in injected scipt
+    "storage",
+    "<all_urls>"
   ],
   "browser_action": {
     "default_title": "Open Options", //Latex From Web Copy
     "default_icon": {
       "19" : "images/19-iico.png",
-      "48" : "images/48-iico.png",
-      "128" : "images/128-iico.png"
+      "38" : "images/38-iico.png"
     }
   },
   "options_page": "copy_latex_from_web_options.html",
+  "options_ui": {
+      "page": "copy_latex_from_web_options.html",
+      "chrome_style": true
+      //"open_in_tab": true
+    },
   "background" : {
-    "scripts": ["lib/classes.js","background.js"] // load all script in background in the SAME CONTEXT: that is the order respect the dependecies order!
-    // "page": "background.html" // vedi cartella Examples
-    // "persistent":false // ho dovuto rimuoverla per poter utilizzare webRequest
+    "scripts": ["lib/jquery-1.12.3.min.js","lib/classes.js","background.js"] 
   }
 }

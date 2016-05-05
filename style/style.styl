@@ -38,5 +38,127 @@ body
 	
 	.numberedequation, .inlineformula
 		responseAdvise(wolframbdr)
+		
+
+
+sideWidth = 160 px
+sideBg = #F7F7F7
+borderCL = #e3e3e3
+headerHG = 60px
+pd = 15px
+sideTopMargin = headerHG + pd
+
+.page_options
+	
+	font-family 'Open Sans', sans-serif
+	
+	margin 0
+	padding 0
+	background-color 
+	
+	*, *:before, *:after
+		box-sizing border-box
+	
+	// single page fixed sidebar
+	.container 
+		position relative
+		height 100%
+		width 100%
+		// padding 0 0 0 55px
+		
+
+		#sidebar
+			position fixed
+			top 0
+			bottom 0
+			left 0
+			width sideWidth
+			height 100%
+			background-color sideBg
+			border-right 1px solid borderCL
+			color #909090
+			
+			ul
+				
+				position relative
+				width sideWidth
+				margin 0
+				margin-top sideTopMargin
+				padding 0
+				list-style none
+				
+				li
+					margin 0
+					padding 0
+					
+					&:hover
+						cursor pointer
+						font-style underline
+					
+					div
+						margin 0
+						padding pd
+						
+			.sidebar-active
+				color black
+				font-weight bold
+				border-left 7px solid #CCCCB4
+				background-color white
+				width calc( 100% + 5px )
 
 			
+		#loom
+			
+			margin-left sideWidth 
+	
+			#header, #content
+				padding pd
+		
+			#header
+				height headerHG
+				font-size 20px
+				color #717171
+				
+				div
+					height 100%
+					border-bottom 1px solid borderCL
+					margin 0
+					
+				// border-bottom-color: black;
+				// border-style: solid;
+				// border-width: 1px 1px 1px 0;
+				// box-shadow: 0 0 1px black;
+				
+			#content
+				
+				[id^="content_"]
+					text-align justify
+					display none
+					
+				.content-active
+					display block
+					
+
+				#content_options
+					form
+						
+						fieldset
+							border 0
+							margin 0 pd
+							
+							&.opt_monitor
+								label
+									margin pd
+									input
+										margin-right 5px
+						
+						label
+							display block
+							
+						button
+							margin-top pd
+							
+					.advise-ok
+						padding floor(pd/2)
+						background-color beige
+						margin pd 0	
