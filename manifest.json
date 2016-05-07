@@ -3,7 +3,9 @@
   // "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "name": "Latex From Web",
   "description": "This extension add a button on Latex redered formulae in Web page to copy on fly the latex code. This hack works for Wikipedia.",
-  "version": "1.0",
+  "version": "1.0.0",
+  "version_name": "1.0.0 beta",
+  "author": "Simone Scardoni",
   "icons" : {
     "16" : "images/16-aico.png",
     "48" : "images/48-aico.png",
@@ -31,6 +33,7 @@
       //"open_in_tab": true
     },
   "background" : {
-    "scripts": ["lib/jquery-1.12.3.min.js","lib/classes.js","background.js"] 
+    "scripts": ["lib/jquery-1.12.3.min.js","lib/classes.js","background.js"]
+    // "persistent": false
   }
 }

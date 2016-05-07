@@ -123,17 +123,20 @@ sideTopMargin = headerHG + pd
 					height 100%
 					border-bottom 1px solid borderCL
 					margin 0
-					
-				// border-bottom-color: black;
-				// border-style: solid;
-				// border-width: 1px 1px 1px 0;
-				// box-shadow: 0 0 1px black;
-				
+									
 			#content
+				
+				a
+					color #929271
+					
+					&:active
+						color #CCCCB4
+					
 				
 				[id^="content_"]
 					text-align justify
 					display none
+					max-width 700px
 					
 				.content-active
 					display block
@@ -162,3 +165,104 @@ sideTopMargin = headerHG + pd
 						padding floor(pd/2)
 						background-color beige
 						margin pd 0	
+
+
+				#content_license, #content_disclaimer
+					li,div
+						margin-top pd
+						
+				#content_donate
+					
+					img
+						margin pd
+						max-width 127px
+
+					table
+						
+						margin-top 7px
+
+						td
+							padding 11px
+							font-size 15px
+							
+
+						td:first-child
+							text-align right
+							
+					#donate-import
+						font-size 17px
+						padding 0 13px
+						
+					#donate-select
+						position relative
+						top -3px
+						font-size 14px
+						
+					#donate-slider
+						position relative
+						top 3px
+						
+
+					.paypal
+						
+						font-size 1em!important
+						
+						width 159px
+						height 29px
+						color #2e3192
+						text-decoration none
+						display block
+						text-align center
+						position relative
+
+						/* BACKGROUND GRADIENTS */
+						background #FEE1A5
+						background linear-gradient(top, #FFF, #FEE1A5 50%, #FFB829 51%,
+							#FEE1A5 95%, #FEE1A5)
+						background -webkit-gradient(linear, left top, left bottom,
+								color-stop(0, #FFF), color-stop(.5, #FEE1A5), color-stop(.51, #FFB829),
+								color-stop(.95, #FEE1A5), color-stop(.96, #FEE1A5), to(#FEE1A5))
+
+						/* BORDER RADIUS */
+						border-radius 18px
+
+						border-bottom 1px solid #FFF
+						border-top 1px solid #FFB829
+						border-left 1px solid #FEE1A5
+						border-right 1px solid #FEE1A5
+
+						/* TEXT SHADOW */
+						text-shadow 0px 1px 1px white
+
+						/* BOX SHADOW */
+						box-shadow 0 1px 3px #777
+						font italic bold 18px/32px helvetica, arial
+					
+
+						/* WHILE HOVERED */
+						&:hover
+							
+							background #FEE1A5
+							background linear-gradient(top, #FFF, #FEE1A5 50%,
+								#FFB829 51%, #FEE1A5 95%, #FEE1A5)
+							background -webkit-gradient(linear, left top, left bottom,
+								color-stop(0, #FFF), color-stop(.5, #FEE1A5), color-stop(.51, #FFB829),
+								color-stop(.95, #FEE1A5), color-stop(.96, #FEE1A5), to(#FEE1A5))
+							box-shadow 0 1px 2px black
+													
+						/* WHILE BEING CLICKED */
+						&:active
+							box-shadow 0 2px 6px black
+							
+										
+					#donate-thanks
+						li
+							padding 7px
+							color silver
+							text-decoration line-through
+							
+							&.thanks
+								color black
+								font-size 1.2em
+								text-decoration none
+								// font-weight bold

@@ -12,8 +12,9 @@
     <nav id="sidebar">
     	<ul>
     		<li><div id="view_options" class="sidebar-active">Option</div></li>
+    		<li><div id="view_donate">Donate</div></li>
+    		<li><div id="view_license">License</div></li>
     		<li><div id="view_disclaimer">Disclaimer</div></li>
-    		<li><div id="view_"></div></li>
     	</ul>
     </nav>
     <div id="loom">
@@ -36,16 +37,99 @@
 
 
 
+
+    		<div id="content_donate">
+    			<div>
+    				If you prreciate this work you can make a small donation to offer me a coffee, a beer, a pizza or else!
+    			</div>
+    			<img alt="Paypal Logo" src="images/paypal_hz.png"/>
+    			<table>
+    				<tr>
+    					<td>
+    						<input id="donate-slider" type="range" min="0.5" max="100" step="0.1" value="0.50"/>
+    						<span id="donate-import"></span>
+    						<select id="donate-select">	</select>
+    					</td>
+    					<td>
+    						<a href="" id="donate-import-auto" target="_blank" class="paypal"></a>
+    					</td>
+    				</tr>
+    				<tr>
+    					<td>
+    						Choose Manually
+    					</td>
+    					<td>
+    						<a href="" id="donate-import-manually" target="_blank" class="paypal">Donate</a>
+    					</td>
+    				</tr>
+
+    			</table>
+   				<ul id="donate-thanks">
+   					<li data-rule="1">wow, a coffee!</li>
+   					<li data-rule="5">beer for me!</li>
+   					<li data-rule="9">thank for a McMenu!</li>
+   					<li data-rule="20">a pizza with friends!</li>
+   					<li data-rule="50">a beer with me: I'm paying!</li>
+   					<li data-rule="1000"><b>your generosity make me cry!</b></li>
+   				</ul>
+    		</div>
+
+
+
+
     		<div id="content_disclaimer">
-    			Extension replaces Wikipedia bitmap equations with HTML-CSS ones by re-rendering them with an open source MathJax (http://mathjax.org/) library. In effect, this allows to scale Wikipedia pages without loosing in equation quality.<br/>
+    			<div>
+    				This plugin purpose is simplify the copy of Latex code in particular domain (wikipedia.org and mathworld.wolfra.org).
+    			</div>
+    			<div>
+    				If owner's of that domain don't appreciate this work, please contact me ( <a class="config-author-email"href="">my email</a> ) and I'll provide for removal from this extension.
+    			</div>
+    		</div>
 
-    			Left-Click on equation to instantly zoom it to 200% (can be changed via MathJax menu).<br/>
 
-    			Right-Click on equation to show MathJax's context menu with additional options, e.g. "Scale All Math..." to instantly scale all equations on a page, "TeX commands" to see the source TeX equation etc.<br/>
+    		<div id="content_license">
 
-    			Extension is now published under New BSD License (https://github.com/bgromov/wiki-mathjax/blob/master/LICENSE.md) with the source code available here (https://github.com/bgromov/wiki-mathjax).<br/>
+    			<div>Software License Agreement (BSD License 3-Clause)</div>
 
-    			For bug reports and feature requests, please use Issue tracker (https://github.com/bgromov/wiki-mathjax/issues).<br/>
+    			<!-- copyright (c) 2015, Simone Scardoni All rights reserved -->
+
+    			<div>
+    				Redistribution and use in source and binary forms, with or without
+    				modification, are permitted provided that the following conditions are met:
+    			</div>
+
+    			<ul>
+    				<li>
+    			    	Redistributions of source code must retain the above copyright
+    			      	notice, this list of conditions and the following disclaimer.
+    			    </li>
+    			    <li>
+    			    	Redistributions in binary form must reproduce the above copyright
+    			      	notice, this list of conditions and the following disclaimer in the
+    			      	documentation and/or other materials provided with the distribution.
+    			    </li>
+    			    <li>
+    			    	Neither the name of the author nor the
+    			      	names of its contributors may be used to endorse or promote products
+    			      	derived from this software without specific prior written permission.
+    			    </li>
+    			</ul>
+
+    			<div>
+	    			THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+	    			ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	    			WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	    			DISCLAIMED.<br/>
+	    			IN NO EVENT SHALL COPYRIGHT HOLDER BE LIABLE FOR ANY
+	    			DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	    			(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	    			LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+	    			ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	    			(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	    			SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    			</div>
+
+
     		</div>
 
 
@@ -55,6 +139,7 @@
     <!-- <div id="footer"></div> -->
 </div>
 
+<script type="text/javascript" src="lib/config.js"></script>
 <script type="text/javascript" src="lib/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="lib/classes.js"></script>
 <script type="text/javascript" src="lib/copy_latex_from_web_options.js"></script>
