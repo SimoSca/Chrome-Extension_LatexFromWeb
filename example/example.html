@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latex From Web Screencas</title>
+</head>
+<style>
+    div, ul{
+        margin: 17px;
+        font-size: 14px;
+    }
+
+    label, [type="text"]{
+        display: block;
+        text-decoration: line-through;
+        margin: 7px;
+        color:silver;
+        /*opacity: 0.7;*/
+    }
+
+
+    [type="text"]{
+        margin:11px 17px;
+        text-decoration: none;
+    }
+
+    h2{
+        display: none;
+    }
+
+    .viewed, .last{
+        color: black;
+        text-decoration: none;
+    }
+
+    .last{
+        background-color: beige;
+    }
+
+    .finish{
+        display: inline-block;
+        background-color: black;
+        padding: 5px;
+        animation-name: colorize;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes colorize {
+        0%   {color:red;}
+        25%  {color:yellow;}
+        50%  {color:blue;}
+        75%  {color:green;}
+        100% {color:red;}
+    }
+
+
+</style>
+<body class="page_options">
+<h1>Hi,</h1>
+<div id="hello"> here a simple Latex From Web example: </div>
+
+<div id="steps">
+    
+    <label><input type="checkbox">go to site present in extension list, and search page with formulas: in this case <i>differential equation in Wikipedia</i></label>
+    
+    <label><input type="checkbox">mouse hover an equation: display simple "Copy Latex" box</label>
+    
+    <label><input type="checkbox">click on image: automatically copy the Latex formula into clipboard</label>
+
+    <label><input type="checkbox">just to test, I'll paste in this text-box<br/>
+        <input type="text"/>
+    </label>
+
+    <label><input type="checkbox">as you can see is very simple.</label>
+
+</div>
+
+<h2>That's all!</h2>
+
+</body>
+
+
+<script type="text/javascript" src="../lib/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="example.js"></script>
+
+
+</html>
