@@ -4,7 +4,8 @@ var _g = {
     store: new SettingsStorage(),
     regex: {
 		wikipedia: new RegExp( '^https?:\/\/[^\/]+wikipedia.org' ,'i'),
-		wolfram: new RegExp('^https?:\/\/mathworld.wolfram.com', 'i')
+		wolfram: new RegExp('^https?:\/\/mathworld.wolfram.com', 'i'),
+		instructure: new RegExp('^https?:\/\/.*.instructure.com', 'i'),
 	}
 }
 
@@ -72,6 +73,13 @@ function tabs_check(id, info, tab){
 		if( monitor.wikipedia && url.match( _g.regex.wikipedia )){
 			// NB: l'ordine di caricamento e' importante!
 			var def = inj.concat(["injection/wikipedia.js"]);
+			concatenateInjections(id, def);
+			match = true;
+		}
+
+		if( monitor.instructure && url.match( _g.regex.instructure )){
+			// NB: l'ordine di caricamento e' importante!
+			var def = inj.concat(["injection/instructure.js"]);
 			concatenateInjections(id, def);
 			match = true;
 		}
