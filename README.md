@@ -8,7 +8,7 @@ this is a very simple **Google Chrome** *extension* to add button on Latex rende
 SITES
 -----
 
-actually plugin supports only www.wikipedia.org and www.mathworld.wolfram.com .
+actually plugin supports only www.wikipedia.org, www.mathworld.wolfram.com and www.instructure.com .
 
 
 
