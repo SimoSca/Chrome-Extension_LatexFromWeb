@@ -2,8 +2,8 @@
   "manifest_version": 2,
   "name": "Latex From Web",
   "description": "This extension add a button on Latex rendered formulas in Web page to copy on fly the Latex code.",
-  "version": "1.0.0",
-  "version_name": "1.0.0 beta",
+  "version": "1.0.1",
+  "version_name": "1.0.1 beta",
   "author": "Simone Scardoni",
   "icons" : {
     "16" : "images/16-aico.png",
